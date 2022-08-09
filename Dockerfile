@@ -6,8 +6,6 @@ ENV SKYWALKING_RELEASE_TAG v4.2.0
 ENV LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/usr/local/lib:/usr/local/lib64
 ENV LD_RUN_PATH=$LD_RUN_PATH:/usr/local/lib:/usr/local/lib64
 
-RUN sed -i 's/dl-cdn.alpinelinux.org/mirrors.cloud.tencent.com/g' /etc/apk/repositories
-
 RUN apk add -u --no-cache tzdata \
  && cp /usr/share/zoneinfo/Asia/Shanghai /etc/localtime
 
